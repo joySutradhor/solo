@@ -804,6 +804,13 @@ header .flex-child.flex-right {
 .logo-dark {
 	max-height: 38px; }
 
+/* .logo-nav{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	top: 35px;
+} */
+
 .navbar-header,
 .nav-wrap {
 	padding: 0 15px; }
@@ -3321,7 +3328,9 @@ table th {
 .product-img {
 	position: relative;
 	overflow: hidden;
-	margin-bottom: 24px; }
+	margin-bottom: 24px;
+	/* perspective: 1000px; */
+}
 	.product-img:hover .product-actions {
 		opacity: 1;
 		visibility: visible; }
@@ -3338,21 +3347,27 @@ table th {
 		text-align: center;
 		line-height: 35px;
 		color: #fff !important;
-		transition: all 0.3s ease-in-out; }
+		transition: all .3s ease-in-out; }
 		.product-img .product-quickview:hover {
 			background-color: #b79d82; }
 	.product-img .back-img {
 		position: absolute;
 		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		opacity: 0;
-		/* visibility: hidden; */
+		visibility: hidden;
 		backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
+		transform: rotateY(180deg);
 		transition: all 0.3s ease-in-out; }
 	.product-img:hover .back-img {
 		opacity: 1;
+		visibility: visible; 
+		transform: rotateY(0);
 		 }
 	
 		
